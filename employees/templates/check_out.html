@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container d-flex justify-content-center"></div>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="employee_id" placeholder="Enter Employee ID">
+        <button type="submit">Check Out</button>
+    </form>
+</div>
+
+{% endblock %}

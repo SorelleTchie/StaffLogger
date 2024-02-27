@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<!-- contains confirmation message that employee has checked in -->
+{% block content %}
+<div class = "centered-content">
+    <div class="notification-box">
+        <a href="{% url 'landing_page' %}" class="close-button">X</a>
+        <p>Employee {{ employee.first_name}} {{ employee.last_name}} has checked in at {{ record.check_in_time }}.</p>
+    </div>
+</div>
+{% endblock %}

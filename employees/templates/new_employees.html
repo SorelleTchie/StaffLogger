@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title%}Employee Information{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+    <h1>Let's Create Your Employee ID</h1>
+</div>
+<div class="container d-flex justify-content-center">
+    <form method="post" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="id" value="{{ employee.id }}">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
